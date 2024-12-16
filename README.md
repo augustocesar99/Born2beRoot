@@ -1,6 +1,8 @@
 ## Visão Geral do Projeto:
 
-> _Este projeto tem como objetivo apresentar os conceitos fundamentais da virtualização. A partir da criação da minha primeira máquina virtual, utilizando o VirtualBox (ou UTM, caso o VirtualBox não seja uma opção), seguindo orientações específicas, o desafio é aprender a configurar e aplicar rigorosas regras de segurança no sistema operacional. Ao final, você será capaz de personalizar e administrar seu próprio sistema de maneira eficiente._
+> _Este projeto tem como objetivo apresentar os conceitos fundamentais da virtualização. A partir da criação da minha primeira máquina virtual, utilizando o VirtualBox
+> (ou UTM, caso o VirtualBox não seja uma opção), seguindo orientações específicas, o desafio é aprender a configurar e aplicar rigorosas regras de segurança no sistema operacional.
+> Ao final, você será capaz de personalizar e administrar seu próprio sistema de maneira eficiente._
 
 - Configuração de firewall com `UFW`
 - Gerenciamento de permissões de administrador com `sudo`
