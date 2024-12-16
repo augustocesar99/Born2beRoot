@@ -1,7 +1,4 @@
-<h1 align="center">
-	<img alt="badge born" src="./born2beroot_dark.svg" />
-</h1>
-  ## 🗣️ About
+  ## Project Summary:
 
 > _This project aimed to introduce you to the wonderful world of virtualization. I created my first machine in VirtualBox (or UTM if you can't use VirtualBox)
 > under specific instructions. So, by the end of this project, you will be able to configure your own operating system while implementing strict rules._
