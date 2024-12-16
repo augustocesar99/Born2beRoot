@@ -1,40 +1,42 @@
-  ## Project Summary:
+## Visão Geral do Projeto:
 
-> _This project aimed to introduce you to the wonderful world of virtualization. I created my first machine in VirtualBox (or UTM if you can't use VirtualBox)
-> under specific instructions. So, by the end of this project, you will be able to configure your own operating system while implementing strict rules._
+> _Este projeto tem como objetivo apresentar os conceitos fundamentais da virtualização. A partir da criação da minha primeira máquina virtual, utilizando o VirtualBox (ou UTM, caso o VirtualBox não seja uma opção), seguindo orientações específicas, o desafio é aprender a configurar e aplicar rigorosas regras de segurança no sistema operacional. Ao final, você será capaz de personalizar e administrar seu próprio sistema de maneira eficiente._
 
-- setting up a firewall using `UFW`
-- configuring system administration with `sudo`
-- implementing strong password policy using `libpam-quality`
-- setting up a `cron` task to run a monitoring script every 10 minutes
-  
-This project also covered the basics of criptography, networking, hard disk partitioning, and shell scripting (lots of output formatting!)
+- Configuração de firewall com `UFW`
+- Gerenciamento de permissões de administrador com `sudo`
+- Implementação de políticas de segurança de senhas com `libpam-quality`
+- Agendamento de tarefas de monitoramento com `cron`, executando scripts a cada 10 minutos
 
-	
+Além disso, o projeto abrange temas essenciais como criptografia, redes, particionamento de discos e programação de shell, com foco na formatação de saída de comandos!
+
+---
+
+### Comandos Comuns e Suas Funções
+
 | Comando | Descrição |
 | --- | --- |
-| `lsblk` |  mostrar as partições |
-| `sudo aa-status` | mostrar os status do *AppArmor* |
-| `sudo ufw status verbose` |  check that the *ufw* service |
-| `sudo ss -tunlp` |  check that the *ssh* service |
-| `hostnamectl status` |  mostra o hostname atual e outras informações |
-| `hostnamectl set-hostname <novo hostname>` |  alterar o hostname |
-| `sudo awk -F ":" '{print $1}' /etc/passwd` |  mostra os *usuários* |
-| `sudo awk -F ":" '{print $1}' /etc/group` |  mostra os *grupos* |
-| `adduser <usuario>` |  cria um novo usuario com home e tudo |
-| `userdel -r <usuario>` |  detela o usuario, -r deleta todos os arquivos |
-| `usermod -l <novo nome usuario> <usuario>` |  muda o nome do usuario |
-| `groupadd <grupo>` |  cria grupo |
-| `groupdel <grupo>` |  deleta grupo |
-| `gpasswd -a <usuario> <grupo>` |  adiciona o usuario no grupo |
-| `gpasswd -d <usuario> <grupo>` |  remove o usuario do grupo |
-| `getent group <grupo>` |  mostra usuarios que estão nesse grupo |
-| `passwd <usuario>` |  trocar senha |
-| `sudo visudo` |  entra para poder edita o arquivo /etc/sudoers |
-| `sudo ufw allow/deny <porta>` | dar acesso/tirar acesso da porta |
-| `sudo ufw delete <numero da linha a ser deletada>` |  deletar linha de acesso a alguma porta |
-| `ssh [usuario logado]@[ip da VM] -p [porta x]` |  como conectar o terminal do seu computador com a VM |
-| `scp -P [porta] [arquivo] [usuario logado]@[ip da VM]:[diretorio]` |  mandar arquivos do seu computador para a VM via terminal |
-| `wall` ou `wall -n` |  exibe uma mensagem ou o conteudo de um arquivo no terminal de todos os usuarios conectados |
-| `exit` ou `logout` |  terminar conexão do seu computador com a VM |
-| `sudo crontab -e` |  editar o arquivo CRON |
+| `lsblk` | Exibe as partições e dispositivos conectados |
+| `sudo aa-status` | Mostra o status atual do *AppArmor* |
+| `sudo ufw status verbose` | Verifica o status do serviço *ufw* (firewall) |
+| `sudo ss -tunlp` | Verifica o status de conexões de rede, incluindo o serviço *ssh* |
+| `hostnamectl status` | Exibe o nome do host e outras informações do sistema |
+| `hostnamectl set-hostname <novo hostname>` | Altera o nome do host do sistema |
+| `sudo awk -F ":" '{print $1}' /etc/passwd` | Lista todos os usuários cadastrados no sistema |
+| `sudo awk -F ":" '{print $1}' /etc/group` | Exibe todos os grupos do sistema |
+| `adduser <usuario>` | Cria um novo usuário com diretório home |
+| `userdel -r <usuario>` | Remove um usuário e seu diretório home |
+| `usermod -l <novo nome usuario> <usuario>` | Altera o nome de um usuário já existente |
+| `groupadd <grupo>` | Cria um novo grupo de usuários |
+| `groupdel <grupo>` | Exclui um grupo do sistema |
+| `gpasswd -a <usuario> <grupo>` | Adiciona um usuário a um grupo específico |
+| `gpasswd -d <usuario> <grupo>` | Remove um usuário de um grupo |
+| `getent group <grupo>` | Exibe os usuários pertencentes a um grupo específico |
+| `passwd <usuario>` | Modifica a senha de um usuário |
+| `sudo visudo` | Permite editar o arquivo `/etc/sudoers` para configuração de permissões |
+| `sudo ufw allow/deny <porta>` | Permite ou bloqueia acesso à porta especificada pelo *ufw* |
+| `sudo ufw delete <linha>` | Remove uma regra específica do firewall |
+| `ssh [usuario]@[ip da VM] -p [porta]` | Conecta-se à VM via SSH |
+| `scp -P [porta] [arquivo] [usuario]@[ip da VM]:[diretorio]` | Copia arquivos para a VM usando SCP |
+| `wall` ou `wall -n` | Exibe uma mensagem ou o conteúdo de um arquivo para todos os usuários conectados |
+| `exit` ou `logout` | Finaliza a sessão do terminal conectado à VM |
+| `sudo crontab -e` | Edita o arquivo de agendamento de tarefas `cron` |
