@@ -1,16 +1,6 @@
 <h1 align="center">
 	<img alt="badge born" src="./born2beroot_dark.svg" />
 </h1>
-
-<div align="center">
-
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/nandajfa/Born2beRoot/blob/main/LICENSE)
-
- </div>
- 
-<p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/appinha/42cursus-00-Libft?color=blueviolet" />
-
   ## 🗣️ About
 
 > _This project aimed to introduce you to the wonderful world of virtualization. I created my first machine in VirtualBox (or UTM if you can't use VirtualBox)
